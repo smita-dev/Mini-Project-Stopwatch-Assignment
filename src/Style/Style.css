@@ -1,0 +1,32 @@
+button{
+  border: 1px solid;
+  cursor: pointer;
+  padding: 5 rem 5 rem;
+  margin: 10px;
+  background-color:blue;
+  color: white;
+}
+span,h1{
+    display: inline-block;
+    margin: 20px;
+    /* margin-left: ; */
+}
+.buttonStyle{
+    margin-left: 45%;
+   /* margin-right: 50%;  */
+   margin-top: 50px;
+}
+.time{
+    padding: 50px;
+    background-color: violet;
+        margin: auto;
+        width: 50%;
+        height: 50%;
+        border: 3px solid green;
+        /* padding: 10px; */
+      
+}
+.header{
+    width: 100%;
+    text-align: center;
+}

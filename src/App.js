@@ -1,18 +1,19 @@
-import logo from "./logo.svg";
-import "./css/App.css";
-import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-    </div>
-  );
+import React,{useState} from "react";
+import StopWatch from './Component/StopWatch';
+//import './css/style.css'
+// import { Row,Col, Container } from 'react-bootstrap';
+
+
+function App() {  
+  return(
+     <div>
+       <h1 className='header'>StopWatch</h1>
+       <StopWatch/>
+     </div>
+  )
 }
+  
+
 
 export default App;
