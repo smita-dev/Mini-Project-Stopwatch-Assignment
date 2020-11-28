@@ -9,7 +9,7 @@ import '../src/Style/Style.css'
 function App() {  
   return(
      <div>
-       <h1 className='header'>StopWatch</h1>
+       <h1 className='header'>STOP WATCH</h1>
        <StopWatch/>
      </div>
   )
