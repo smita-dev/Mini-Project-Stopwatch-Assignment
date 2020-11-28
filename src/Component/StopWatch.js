@@ -17,9 +17,7 @@ function StopWatch() {
   //    setSeconds(sec);
   //    console.log("increment");
   // }
-  function startTimer() {
-    t=setInterval(()=>{
-      
+  function increment(){
       var finalValue=parseInt(sec)+1;
       console.log("final value :"+finalValue)
       if(sec<9)
@@ -61,7 +59,10 @@ function StopWatch() {
       
     
       console.log("increment");
-    }, 1000);
+    
+  }
+  function startTimer() {
+    t=setInterval(increment, 1000);
     // setHours('00');
     // setMinutes('00');
     
