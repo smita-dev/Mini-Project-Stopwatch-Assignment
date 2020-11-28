@@ -18,7 +18,8 @@ button{
 span,h1{
     display: inline-block;
     margin: 20px;
-    color:white;
+    color:rgb(251, 255, 253);
+    opacity: 1;
     /* margin-left: ; */
 }
 .buttonStyle{
