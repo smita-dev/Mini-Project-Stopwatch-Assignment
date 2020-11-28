@@ -1,5 +1,5 @@
 import '../Style/Style.css';
-import {useState} from 'react';
+import React,{useState} from 'react';
 //import { Row,Col, Container } from 'react-bootstrap';
 var sec=0;
   var min=0;
