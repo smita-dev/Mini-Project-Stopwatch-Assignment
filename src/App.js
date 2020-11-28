@@ -1,9 +1,10 @@
 
-import React,{useState} from "react";
+import React from "react";
 import StopWatch from './Component/StopWatch';
-//import './css/style.css'
+import '../src/Style/Style.css'
 // import { Row,Col, Container } from 'react-bootstrap';
 
+// import Background from '../src/Style/img_forest.jpg';
 
 function App() {  
   return(

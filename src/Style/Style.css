@@ -1,29 +1,41 @@
+/* .screenStyle{
+    background-image: url(img_forest.jpg);
+    /* background-image: 'url(${'img_forest.jpg'}'`; */
+    /* background-repeat: no-repeat;
+    background-size: 100%;
+} */
 button{
-  border: 1px solid;
+  border: none;
   cursor: pointer;
   padding: 5 rem 5 rem;
+  height: 40px;
+  width: 90px;
   margin: 10px;
-  background-color:blue;
+  background-color:rgb(5, 88, 40);
+  border-radius: 10px;
   color: white;
 }
 span,h1{
     display: inline-block;
     margin: 20px;
+    color:white;
     /* margin-left: ; */
 }
 .buttonStyle{
-    margin-left: 45%;
+    margin-left: 40%;
    /* margin-right: 50%;  */
    margin-top: 50px;
 }
 .time{
+    border-radius: 15px;
     padding: 50px;
-    background-color: violet;
-        margin: auto;
-        width: 50%;
-        height: 50%;
-        border: 3px solid green;
-        /* padding: 10px; */
+    background-color: black;
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    opacity: 0.5;
+    /* border: 3px solid goldenrod; */
+    /* padding: 10px; */
       
 }
 .header{

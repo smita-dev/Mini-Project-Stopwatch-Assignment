@@ -1,4 +1,9 @@
 body {
+  /* background-image: 'img_forest.jpg'; */
+  background-image: url(./Style/img_forest.jpg);
+  /* background-image: 'url(${'img_forest.jpg'}'`; */
+  background-repeat: no-repeat;
+  background-size: 100%;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

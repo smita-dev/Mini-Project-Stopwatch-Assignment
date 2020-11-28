@@ -1,38 +1,99 @@
 import '../Style/Style.css';
 import {useState} from 'react';
 //import { Row,Col, Container } from 'react-bootstrap';
-const StopWatch=()=>{
-  const [hours, setHours]=useState('00');
-  const [minutes,setMinutes]=useState('00');
-  const [seconds,setSeconds]=useState('00');
+var sec=0;
+  var min=0;
+  var hr=0;
+  var t;
+function StopWatch() {
 
-  function increment()
-  {
-    setHours(hours+(0+1));
-    setMinutes('00');
+  const [hours, setHours] = useState('00');
+  const [minutes, setMinutes] = useState('00');
+  const [seconds, setSeconds] = useState('00');
+
+  // function increment() {
+  //   var finalValue=sec+1;
+  //    sec ='0'+finalValue;
+  //    setSeconds(sec);
+  //    console.log("increment");
+  // }
+  function startTimer() {
+    t=setInterval(()=>{
+      
+      var finalValue=parseInt(sec)+1;
+      console.log("final value :"+finalValue)
+      if(sec<9)
+      {
+        sec ='0'+finalValue;
+        console.log(sec);
+        setSeconds(sec);
+      }
+      else if(sec>59){
+        if(min<9)
+        {
+          var finalmin=parseInt(min)+1;
+          min='0'+finalmin;
+          sec='00';
+          setSeconds(sec);
+          setMinutes(min);
+          sec='00';
+        }
+        else{
+          min=parseInt(min)+1;
+          sec='00';
+          setSeconds(sec);
+          setMinutes(min);
+        }
+        
+      }
+      else if(min>59)
+      {
+        var finalHr=parseInt(hr)+1;
+        setHours(finalHr);
+        setMinutes('00');
+      }
+      else
+      {
+        console.log(finalValue);
+        sec=finalValue
+        setSeconds(sec);
+      }
+      
+    
+      console.log("increment");
+    }, 1000);
+    // setHours('00');
+    // setMinutes('00');
+    
+  }
+  
+  function resetValues() {
     setSeconds('00');
+    sec=0;
+    min=0;
+    hr=0;
+    setMinutes('00');
+    setHours('00');
   }
-  function resetValues()
-  {
-      setSeconds('00');
-      setMinutes('00');
-      setHours('00');
+  function stopTimer(){
+    console.log("pause timer")
+      clearInterval(t);
   }
-    return(
-      <>
-          <div className='time'>
-            <span ><h1>{hours}</h1><h1>Hr</h1></span>
-            <span ><h1>{seconds}</h1><h1>Min</h1></span>
-            <span ><h1>{minutes}</h1><h1>Sec</h1></span>
-          </div>
-          <div className='buttonStyle'>
-            <button onClick={increment}>Start</button>
-            <button>Pause</button>
-            <button onClick={resetValues}>Reset</button>
-          </div>
-          
-      </>
-    )
+  return (
+    <>
+      <div className='time'>
+        <span><h1>{hours}</h1><h1>Hr</h1></span>
+        <span><h1>{minutes}</h1><h1>Min</h1></span>
+        <span><h1>{seconds}</h1><h1>Sec</h1></span>
+      </div>
+      <div className='buttonStyle'>
+        <button onClick={startTimer}>Start</button>
+        <button onClick={stopTimer}>Pause</button>
+        <button onClick={resetValues}>Reset</button>
+      </div>
+
+    </>
+  );
 }
 
 // const Card=()=>{
